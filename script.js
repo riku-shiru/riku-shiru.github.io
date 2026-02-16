@@ -85,4 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryToggle.style.display = 'none';
         });
     }
+    // Lightbox Functionality (Event Delegation)
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    document.addEventListener('click', e => {
+        if (e.target.tagName === 'IMG' && e.target.closest('.photo-gallery')) {
+            lightbox.classList.add('active');
+            const imgElement = document.createElement('img');
+            imgElement.src = e.target.src;
+            while (lightbox.firstChild) {
+                lightbox.removeChild(lightbox.firstChild);
+            }
+            lightbox.appendChild(imgElement);
+        }
+    });
+
+    lightbox.addEventListener('click', e => {
+        if (e.target !== e.currentTarget) return;
+        lightbox.classList.remove('active');
+    });
 });
