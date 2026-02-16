@@ -1,609 +1,329 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Rikushiru</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<!DOCTYPE html>
+<html lang="ja">
 
-		<link rel="icon" href="/images/favicon.ico"><!--apple-touch-iconの設定より先-->
-		<link rel="apple-touch-icon" href="images/gitioicon.png"><!--favicon.icoの設定より後-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rikushiru | Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="/images/favicon.ico">
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body>
+	<header id="header">
+		<div class="container header-container">
+			<a href="#" class="logo">Rikushiru</a>
+			<nav class="nav">
+				<button class="menu-toggle" aria-label="Menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav-links">
+					<li><a href="#">About</a></li>
+					<li><a href="#writing">Writing</a></li>
+					<li><a href="#skills">Skills</a></li>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img class="icon profile" src="images/profile.png" />
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Rikushiru</h1>
-								<p>Welcome to MYPAGE.</p>
-								<nav>
-						            <ul>
-						              <li><a href="http://twitter.com/riku_shiru" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						              <li><a href="https://github.com/riku-shiru" class="icon fa-github"><span class="label">Github</span></a></li>
-						              <li><a href="https://www.facebook.com/rkt.w2024" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									  <li><a href="https://jp.linkedin.com/in/%E9%99%B8%E6%96%97-%E6%B8%A1%E9%82%89-16415b18a" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						              <li><a href="mailto:rikushiru.com@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						            </ul>
-								</nav>
+					<li><a href="#hobby">Hobby</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="apps.html">Apps</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="container" style="padding-top: 40px;"> <!-- Added padding for spacing -->
+			<div class="about-grid fade-in-up">
+				<div class="about-image">
+					<img src="images/profile.jpg" alt="Profile">
+				</div>
+				<div class="about-text">
+					<h1 class="about-name">Rikuto Watanabe</h1>
+					<p class="nickname">Nickname: Rikuhiru (りくしる)</p>
+					<p>Webアプリケーションの設計・開発、組織マネジメントを行うWebエンジニア。</p>
+					<p><strong>Birth Date:</strong> 1995/09/21</p>
+
+					<div class="timeline">
+						<div class="timeline-item">
+							<span class="date">2018/04 - Present</span>
+							<div class="timeline-logo-header">
+								<img src="images/lifull.png" alt="LIFULL" class="brand-logo-lifull">
 							</div>
+							<h4 class="highlight-title">株式会社LIFULL</h4>
+							<p class="highlight-role">Senior Application Engineer / Engineering Manager</p>
+							<p>「LIFULL
+								HOME'S」のバックエンド開発、基盤刷新、アプリケーションの大規模リアーキテクチャを主導。<br>現在はエンジニアリングマネージャーとして組織運営・採用・育成に従事。
+							</p>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#skill">Skills</a></li>
-								<!--li><a href="#elements">Elements</a></li-->
-							</ul>
-						</nav>
-					</header>
+						<div class="timeline-item">
+							<span class="date">2021/08 - 2023/03</span>
+							<div class="timeline-logo-header">
+								<img src="images/codegym.webp" alt="CODEGYM" class="brand-logo-lifull">
+							</div>
+							<h4 class="highlight-title">株式会社CODEGYM</h4>
+							<p class="highlight-role">Instructor (副業)</p>
+							<p>プログラミングスクールでのメンター業務。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
 
-				<!-- Main -->
-					<div id="main">
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<hr>
-								<h3>Introduction</h3>
-								<span class="image main"><img src="images/turrys_pc.JPG" alt="" /></span>
-								<p>都内在住のWebエンジニアです。<br>
-								Webアプリケーションを作成しています。</p>
-								<hr>
-								<h3>Name</h3>
-								<p>Rikuto Watanabe</p>
-								<h3>NickName</h3>
-								<p>りくしる</p>
-								<h3>BirthDate</h3>
-								<p>1995/09/21</p>
-								<h3>Job</h3>
-								<p>LIFULL(2018/4 - now): <br>
-								- Senior Application Engineer <br> 
-								- Engineering Manager
-								</p>
-								<p>CODEGYM(2021/8 - 2023/3): <br>
-								- Instructor
-								</p>
-								<hr>
-								<h2 class="major">Hobby</h2>
-								<h3>Photo</h3>
-								<div class="photo_panel">
-									<span class="image fit-double"><img src="images/aizu_inawasiro.jpeg" alt="" /></span>
-									<span class="image fit-double"><img src="images/zeniarai-enoshima-min.JPG" alt="" /></span>
-									<span class="image fit-double"><img src="images/chiyoda-sakura-min.JPG" alt="" /></span>
-									<span class="image fit-double"><img src="images/atami_yuami-min.JPG" alt="" /></span>
-								</div>
-								<h3>Trip</h3>
-								<p>聖地巡礼とか温泉巡りの旅をよくしてます</p>
-								<h3>Programming</h3>
-								<p>なにか面白いと思うものを作るのが趣味です</p>
-								<h3>Animation</h3>
-								<p>氷菓、響け！ユーフォニアムがかなり好きで聖地巡礼よく行きます</p>
-								<h3>Game</h3>
-								<p>SwitchとゲーミングPCを持っていて、さまざまなゲームをプレイしています。特に好きなのはモンハンです。</p>
-							</article>
+		<section id="writing" class="section bg-light">
+			<div class="container">
+				<h2 class="section-title fade-in-up">Writing</h2>
+				<div class="works-grid">
+					<!-- LIFULL Blog -->
+					<a href="https://www.lifull.blog/archive/author/LIFULL-watanari" target="_blank"
+						class="work-card fade-in-up">
+						<div class="work-icon-container"
+							style="background-color: #fff; border-bottom: 2px solid #FF5800;">
+							<img src="images/lifull.png" alt="LIFULL" style="width: 60%;">
+						</div>
+						<div class="work-info">
+							<h3>LIFULL Creators Blog</h3>
+							<p>企業技術ブログへの寄稿</p>
+						</div>
+					</a>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Writing</h2>
-								<h3>Qiita</h3>
-								<a href="https://qiita.com/riku-shiru" class="image main"><img src="images/qiita.png" alt="qiita.com/riku-shiru" /></a>
-								<p><a href="https://qiita.com/riku-shiru">qiita.com/riku-shiru</a><br>
-									技術系の記事を書いてます</p>
-								<h3>Rikushiru.log</h3>
-								<a href="https://riku-shiru.com" class="image main"><img src="images/rikushiru_log.png" alt="https://riku-shiru.com" /></a>
-								<p><a href="https://riku-shiru.com">RIKUSHIRU.log</a><br>
-									技術系以外にもいろいろ書いてるブログです。</p>
-								<h3><a href="https://www.lifull.blog/archive/author/LIFULL-watanari">LIFULL Creators Blog</a></h3>
-								<p>企業の技術ブログに一部寄稿しています。</p>
-								
-								<h2 class="major">Created Application</h2>
-								<a href="https://shiritori.riku-shiru.com/" class="image main"><img src="images/shiritori.png" style="width: 50%; margin-left:25%;" alt="オンライン消去しりとり"/></a>
-								<p><a href = "https://shiritori.riku-shiru.com/">オンライン消去しりとり</a><br>
-									自分が一度使った文字は使えなくなるという特殊ルールを含めたしりとりゲームになっています。
-									普段のしりとりに飽き飽きという方におススメです。
-									かなり論理的にしりとりを進めないと
-									あとあとでかなり苦しくなるかもしれません。
-									語彙力と戦略が試されます。
-									しりとり好きな皆さん。<br>
-									オンライン対戦形式で消去しりとりを楽しんでみませんか？
-								<a href = "https://macafs.com/" class="image main"><img src="images/macafs.png" alt="MaCaFS" /></a>
-								<p><a href = "https://macafs.com/">MaCaFS</a><br>
-									※現在閉鎖<br>
-									SNSのデータを利用して名刺をデザインすることができるサービスです。
-									会社の名刺を勉強会で出すのをためらうこととか多いと思いますが、このサービスを利用すれば簡単に名刺をデザインできる上に自分のSNSアカウントの宣伝にもなります。</p>
-								<a href = "https://furiten.herokuapp.com/" class="image main"><img src="images/furiten.png" alt="Friten" /></a>
-								<p><a href = "https://furiten.herokuapp.com/">Friten</a><br>
-									※現在閉鎖<br>
-									自分が所属していた会津大学の競技麻雀部専用のスコア管理アプリです。
-									ランキングを表示することができる等、部員のモチベーションの向上に役立っているよう感じます。</p>
-								<a href="https://finder-foods.herokuapp.com/" class="image main"><img src="images/foodfind.png" alt="" /></a>
-								<p><a href="https://finder-foods.herokuapp.com/">会津若松市内の営業時間内の食事処を検索できるアプリです。</a><br>
-									※現在閉鎖<br>
-									会津若松は田舎なので、これがないと開いてないことが多く時間の無駄になります。</p>
-								<a href="https://rikutter.herokuapp.com/" class="image main"><img src="images/rikutter1.png" alt="" /></a>
-								<p><a href="https://rikutter.herokuapp.com/">自作のSNSアプリです。</a><br>
-									※現在閉鎖<br>
-									Twitterがあれば十分ですよね。</p>
-							</article>
-						<!-- Skill -->
-							<article id="skill">
-								<h2 class="major">Job Skills</h2>
-								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Role</th>
-												<th>experience</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Application Engineer</td>
-												<td>LIFULL (2018/04 -)</td>
-											</tr>
-											<tr>
-												<td>Tech Lead</td>
-												<td>LIFULL (2019/10 -)</td>
-											</tr>
-											<tr>
-												<td>Senior Application Engineer</td>
-												<td>LIFULL (2024/04 -)</td>
-											</tr>
-											<tr>
-												<td>Engineering Manager</td>
-												<td>LIFULL (2024/10 -)</td>
-											</tr>
-											<tr>
-												<td>Engineering Coacher</td>
-												<td>CODEGYM (2021/08 - 2023/03)</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<h2 class="major">Engineering Skills</h2>
-								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>name</th>
-												<th>level(1~5)</th>
-												<th>experience</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>JavaScript and TypeScript</td>
-												<td>5</td>
-												<td>Has experience in business use. Select JavaScript for server-side or front-end usage. JQuery and VueJS and Stimulus are used for the front end. NodeJS is used on the server side. The frameworks we usually use are express, loopback4, and fastify.
-													They are mainly used to build applications that employ clean architecture technical design, simple web applications, and batch processing. </td>
-											</tr>
-											<tr>
-												<td>Ruby</td>
-												<td>5</td>
-												<td>Has experience in business use. Mainly use frameworks such as Ruby on Rails and Sinatra.</td>
-											</tr>
-											<tr>
-												<td>PHP</td>
-												<td>5</td>
-												<td>Has experience in business use. Mainly use frameworks such as Laravel, Symfony.</td>
-											</tr>
-											<tr>
-												<td>Docker</td>
-												<td>5</td>
-												<td>The main focus is on application development using Docker. I usually use Docker application construction as an essential part of our technology selection process. In particular, I am very good at building Dockerfile and docker-compose. I also provide learning opportunities for knowledge transfer. Since I very often use kubernetes as the application platform, I am also very good at designing Dockerfiles and applications with kubernetes startup in mind.</td>
-											</tr>
-											<tr>
-												<td>Nginx</td>
-												<td>5</td>
-												<td>Nginx is most often used as a web server. I have a lot of experience using it in our business. We built LIFULL's image server with nginx_small_light, and even now it is used throughout the company as an application capable of handling thousands of RPS, and I have played a role in the innovation of webp. 
-													<br>Refs:
-														<ul>
-															<li><a href="https://www.lifull.blog/entry/2023/04/02/090000">LIFULL HOME'Sの画像変換サーバを基盤刷新しパフォーマンス向上をした話</a></li>
-															<li><a href="https://www.lifull.blog/entry/2023/05/26/170000">軽量で軽快！LIFULL HOME’SにおけるUX改善のためのWebP導入</a></li>
-														</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>DDD & CleanArchitecture</td>
-												<td>5</td>
-												<td>Designed clean architecture applications from the ground up and has been an operations, code owner, and tech lead for over several years. 
-													<br>Refs:
-														<ul>
-															<li><a href="https://www.lifull.blog/entry/2024/03/28/180000">開発生産性向上への道： LIFULL HOME’Sのシステムアーキテクチャリプレイス</a></li>
-														</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>CI/CD</td>
-												<td>5</td>
-												<td>Has experience in business use. I have experience in building CI/CD pipelines using CircleCI, Jenkins, and GitHub Actions. I often use GitHub Actions.
-													<br>Refs:
-														<ul>
-															<li><a href="https://www.lifull.blog/entry/2025/03/04/210000">価値創造を加速させるための革新！ リリースフローをGitHubに完結＆仕組み化して劇的な効率化へ！</a></li>
-														</ul>
-											</tr>
-											<tr>
-												<td>Apache Solr</td>
-												<td>4</td>
-												<td>I am developing applications using Apache Solr as a search engine in our work.</td>
-											</tr>
-											<tr>
-												<td>MySQL</td>
-												<td>5</td>
-												<td>Has experience in business use.</td>
-											</tr>
-											<tr>
-												<td>PostgreSQL</td>
-												<td>5</td>
-												<td>Has experience in business use.</td>
-											</tr>
-											<tr>
-												<td>Oracle Database</td>
-												<td>5</td>
-												<td>Has experience in business use.</td>
-											</tr>
-											<tr>
-												<td>GCP</td>
-												<td>3</td>
-												<td>Frequently used services include CloudRun, GCE, GCS, BigQuery, CloudBuild, and GCR.</td>
-											</tr>
-											<tr>
-												<td>Python</td>
-												<td>4</td>
-												<td>Basically, it is used as a hobbyist's choice for development. It is often used when you want to do natural language processing. I also have experienced in creating web applications with flask, as I taught web application building using Python and flask when I was coaching web applications as a side job.</td>
-											</tr>
-											<tr>
-												<td>AWS</td>
-												<td>5</td>
-												<td>Has experience in business use. I use AWS services in various situations, including business. Often uses services are EC2, VPC, CloudWatch, Glue, Batch, S3, CloudFront, CodeBuild, Athena, API Gateway, Lambda and so on.</td>
-											</tr>
-											<tr>
-												<td>Kubernetes</td>
-												<td>4</td>
-												<td>I work primarily in the context of application operations in my business.
-													I have no experience in implementing control planes, but I have several years of practical experience in resource coordination, such as creating manifests related to application operations, and I am still in charge of infrastructure operations for many applications.</td>
-											</tr>
-											<tr>
-												<td>Go</td>
-												<td>2</td>
-												<td>It is used when creating applications (API layer) and batch processing.</td>
-											</tr>
-											<tr>
-												<td>C</td>
-												<td>2</td>
-												<td>I used to be an introduction to programming when I was in college.</td>
-											</tr>
-											<tr>
-												<td>C++</td>
-												<td>2</td>
-												<td>I used to be an introduction to programming when I was in college.</td>
-											</tr>
-											<tr>
-												<td>Java</td>
-												<td>2</td>
-												<td>I used to be an introduction to programming when I was in college.</td>
-											</tr>
-											<tr>
-												<td>Kotlin</td>
-												<td>1</td>
-												<td>I used it when I was creating an Android app.</td>
-											</tr>
-											<tr>
-												<td>MongoDB</td>
-												<td>3</td>
-												<td>Often used as a box to store unstructured data that is very difficult to handle as NoSQL.</td>
-											</tr>
-											<tr>
-												<td>Redis</td>
-												<td>4</td>
-												<td>It is very often used as a cache mechanism.</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</article>
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+					<!-- Qiita -->
+					<a href="https://qiita.com/riku-shiru" target="_blank" class="work-card fade-in-up">
+						<div class="work-icon-container" style="background-color: #55c500;">
+							<!-- Qiita SVG -->
+							<svg class="work-svg-logo" viewBox="0 0 24 24" fill="white">
+								<path
+									d="M7.883 11.615c0-1.92-1.474-3.904-3.974-3.904C1.987 7.71 0 9.183 0 11.679c0 1.92 1.474 3.905 3.973 3.905.801 0 1.602-.256 2.275-.736L7.402 16l.513-.512-1.09-1.088c.673-.736 1.058-1.696 1.058-2.785zm-3.974-3.2c1.827 0 3.269 1.408 3.269 3.232 0 1.569-1.218 3.233-3.237 3.233-2.018 0-3.236-1.632-3.236-3.2 0-2.049 1.634-3.265 3.204-3.265zm5.864 1.568h.673v5.44h-.673zm.32-.736a.574.574 0 0 1-.576-.576c0-.32.256-.576.576-.576.32 0 .577.256.577.576 0 .32-.256.576-.577.576zm2.724 0a.574.574 0 0 1-.577-.576c0-.32.257-.576.577-.576.32 0 .577.256.577.576 0 .32-.256.576-.577.576zm-.32.736h.673v5.44h-.673zm4.71 5.537c-1.25 0-1.987-.96-1.987-1.92V8.479h.673v1.504h2.371v.672h-2.37v2.977c0 .608.48 1.248 1.313 1.248.224 0 .449-.064.64-.192l.065-.032.32.576-.064.032c-.288.16-.64.256-.961.256zm4.454.032c-1.827 0-2.916-1.44-2.916-2.848 0-1.825 1.442-2.913 2.852-2.913.737 0 1.314.256 1.73.736v-.544H24v5.44h-.673v-.607c-.384.48-.961.736-1.666.736zm-.064-5.089c-1.09 0-2.18.832-2.18 2.24 0 1.089.834 2.177 2.244 2.177.64 0 1.282-.288 1.698-.8v-2.817a2.29 2.29 0 0 0-1.762-.8z" />
+							</svg>
+						</div>
+						<div class="work-info">
+							<h3>Qiita</h3>
+							<p>技術記事の投稿活動</p>
+						</div>
+					</a>
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+					<!-- Rikushiru.log -->
+					<a href="https://riku-shiru.com" target="_blank" class="work-card fade-in-up">
+						<div class="work-image" style="background-image: url('images/rikushiru_log.png')"></div>
+						<div class="work-info">
+							<h3>Rikushiru.log</h3>
+							<p>技術・雑記ブログ</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+		<section id="skills" class="section">
+			<div class="container">
+				<h2 class="section-title fade-in-up">Skills</h2>
+				<div class="skills-wrapper fade-in-up">
+					<div class="skill-category">
+						<h3>AI & Future</h3>
+						<div class="skill-list">
+							<span class="skill-tag">Gemini</span>
+							<span class="skill-tag">Kiro</span>
+							<span class="skill-tag">Antigravity</span>
+							<span class="skill-tag">Amazon Q Developer</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Languages</h3>
+						<div class="skill-list">
+							<span class="skill-tag">JavaScript (Node.js)</span>
+							<span class="skill-tag">TypeScript</span>
+							<span class="skill-tag">Ruby</span>
+							<span class="skill-tag">PHP</span>
+							<span class="skill-tag">Python</span>
+							<span class="skill-tag">Go</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Infrastructure</h3>
+						<div class="skill-list">
+							<span class="skill-tag">AWS (Lambda, ECS, S3, etc.)</span>
+							<span class="skill-tag">GCP (CloudRun, BigQuery)</span>
+							<span class="skill-tag">Docker / Kubernetes</span>
+							<span class="skill-tag">Terraform / CloudFormation</span>
+							<span class="skill-tag">CI/CD (GitHub Actions)</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Frameworks & Tools</h3>
+						<div class="skill-list">
+							<span class="skill-tag">Rails</span>
+							<span class="skill-tag">Laravel / Symfony</span>
+							<span class="skill-tag">Express / Fastify</span>
+							<span class="skill-tag">React / Vue</span>
+							<span class="skill-tag">Next.js</span>
+							<span class="skill-tag">Apache Solr / ElasticSearch</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>DB / Architecture</h3>
+						<div class="skill-list">
+							<span class="skill-tag">MySQL / PostgreSQL</span>
+							<span class="skill-tag">Redis</span>
+							<span class="skill-tag">Oracle</span>
+							<span class="skill-tag">DDD</span>
+							<span class="skill-tag">Clean Architecture</span>
+							<span class="skill-tag">Microservices</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-										while (!deck.isInOrder()) {
-										    print 'Iteration ' + i;
-										    deck.shuffle();
-										    i++;
-										}
+		<section id="awards" class="section bg-light">
+			<div class="container">
+				<h2 class="section-title fade-in-up">Awards</h2>
+				<div class="resume-section fade-in-up" style="border-top: none; margin-top: 0; padding-top: 0;">
+					<ul class="resume-list">
+						<li><strong>全社MVP 3回受賞</strong> (2021, 2023, 2025) - 株式会社LIFULL</li>
+						<li><strong>ガイドライン大賞</strong> (2025) - ガイドラインを最も体現した社員として表彰</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-										print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+		<section id="speaking" class="section">
+			<div class="container">
+				<h2 class="section-title fade-in-up">外部登壇</h2>
+				<div class="resume-section fade-in-up" style="border-top: none; margin-top: 0; padding-top: 0;">
+					<ul class="resume-list">
+						<li>
+							<strong>Ltech#9 WAKATE Meetup</strong><br>
+							<a href="https://lifull.connpass.com/event/152299/" target="_blank"
+								class="external-link">https://lifull.connpass.com/event/152299/</a>
+						</li>
+						<li>
+							<strong>テクノロジーナイト ～サーバーサイド開発～25卒</strong><br>
+							<a href="https://paiza.jp/student/job_offers/23263" target="_blank"
+								class="external-link">https://paiza.jp/student/job_offers/23263</a>
+						</li>
+						<li>
+							<strong>開発生産性と開発者体験を改善するための勉強会 (YUMEMI)</strong><br>
+							<a href="https://yumemi.connpass.com/event/371982/" target="_blank"
+								class="external-link">https://yumemi.connpass.com/event/371982/</a><br>
+							<a href="https://www.youtube.com/watch?v=M3Kv05csnn8" target="_blank"
+								class="external-link">Archive (YouTube)</a>
+						</li>
+						<li>
+							<strong>Amazon Q Developer Meetup #2</strong><br>
+							Amazon Q Developer を業務で活用した成果共有と最新情報 Update<br>
+							<a href="https://aws.amazon.com/startups/events/amazonq-developer-meetup-20250828?lang=ja"
+								target="_blank" class="external-link">Event Page</a><br>
+							<a href="https://aws.amazon.com/jp/blogs/news/amazon-q-developer-meetup-2-report/"
+								target="_blank" class="external-link">AWS Blog Report</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="demo-name">Name</label>
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-										</div>
-										<div class="field half">
-											<label for="demo-email">Email</label>
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-										</div>
-										<div class="field">
-											<label for="demo-category">Category</label>
-											<div class="select-wrapper">
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="field half first">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<div class="field half first">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
-										</div>
-										<div class="field half">
-											<input type="checkbox" id="demo-human" name="demo-human" checked>
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="field">
-											<label for="demo-message">Message</label>
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
+		<section id="hobby" class="section bg-light">
+			<div class="container">
+				<h2 class="section-title fade-in-up">Hobby</h2>
+				<div class="hobby-content fade-in-up">
+					<div class="hobby-text">
+						<h3>Interests</h3>
+						<ul class="interest-list">
+							<li><span class="interest-label">App Development</span> - 個人開発で新しい技術に触れるのが好きです。</li>
+							<li><span class="interest-label">Game</span> - <strong>Monster Hunter</strong>, Simulation,
+								RTS, GeoGuessr, Puzzle Games.</li>
+							<li><span class="interest-label">Travel</span> - 温泉巡り、風景写真撮影。(Aizu, Inawashiro, etc.)</li>
+							<li><span class="interest-label">Home Gardening</span> - 家庭菜園で野菜を育てています。</li>
+							<li><span class="interest-label">Anime / Manga</span> - 『氷菓』『響け！ユーフォニアム』等の作品や聖地巡礼。</li>
+						</ul>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Rikushiru. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					<h3 class="minor-title">Gallery</h3>
+					<div class="photo-gallery">
+						<!-- Landscape / Wide -->
+						<img src="images/p1.JPG" alt="Photo 1" loading="lazy">
+						<img src="images/p2.JPG" alt="Photo 2" loading="lazy">
+						<img src="images/p6.JPG" alt="Photo 6" loading="lazy">
+						<img src="images/p8.JPG" alt="Photo 8" loading="lazy">
+						<img src="images/p13.jpg" alt="Photo 13" loading="lazy">
 
+						<!-- Others -->
+						<img src="images/p3.jpg" alt="Photo 3" loading="lazy">
+						<img src="images/p5.jpg" alt="Photo 5" loading="lazy">
+						<img src="images/p7.jpg" alt="Photo 7" loading="lazy">
+						<img src="images/p9.jpg" alt="Photo 9" loading="lazy">
+						<img src="images/p10.jpg" alt="Photo 10" loading="lazy">
+						<img src="images/p11.jpg" alt="Photo 11" loading="lazy">
+						<img src="images/p12.jpg" alt="Photo 12" loading="lazy">
+						<img src="images/p14.jpg" alt="Photo 14" loading="lazy">
+						<img src="images/p15.jpg" alt="Photo 15" loading="lazy">
+						<img src="images/p16.jpg" alt="Photo 16" loading="lazy">
+						<img src="images/p17.jpg" alt="Photo 17" loading="lazy">
+					</div>
+					<button id="gallery-toggle" class="btn gallery-toggle">Show More</button>
+				</div>
 			</div>
+		</section>
 
+		<section id="contact" class="section">
+			<div class="container center-text fade-in-up">
+				<h2 class="section-title">Contact</h2>
+				<p>お問い合わせはメールまたはSNSまで</p>
 
-		<!-- BG -->
-			<div id="bg"></div>
+				<a href="mailto:rikushiru.com@gmail.com" class="btn">Send Email</a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+				<div class="social-links">
+					<a href="http://twitter.com/riku_shiru" target="_blank" aria-label="X (Twitter)"
+						class="sns-icon x-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+						</svg>
+					</a>
+					<a href="https://github.com/riku-shiru" target="_blank" aria-label="GitHub"
+						class="sns-icon github-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/rkt.w2024" target="_blank" aria-label="Facebook"
+						class="sns-icon facebook-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036c-2.148 0-2.971.956-2.971 3.005v.97h3.917l-.52 3.667h-3.397v7.98h-4.846z" />
+						</svg>
+					</a>
+					<a href="https://jp.linkedin.com/in/%E9%99%B8%E6%96%97-%E6%B8%A1%E9%82%89-16415b18a" target="_blank"
+						aria-label="LinkedIn" class="sns-icon linkedin-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/rikurikucom/" target="_blank" aria-label="Instagram"
+						class="sns-icon instagram-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.948-.2-4.354-2.613-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
 
-	</body>
+	<footer id="footer">
+		<div class="container">
+			<p>&copy; 2024 Rikushiru. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
 </html>
