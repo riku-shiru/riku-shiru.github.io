@@ -421,7 +421,7 @@ main {
 }
 
 .photo-gallery.expanded {
-    max-height: 5000px;
+    max-height: 20000px;
     /* Large enough to show all */
 }
 
