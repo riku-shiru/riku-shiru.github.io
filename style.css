@@ -24,6 +24,9 @@ body {
     background-color: var(--bg-color);
     line-height: 1.6;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
@@ -151,6 +154,7 @@ ul {
 
 main {
     padding-top: var(--nav-height);
+    flex: 1;
 }
 
 /* Hero Section Removed */
@@ -413,12 +417,12 @@ main {
     overflow: hidden;
     position: relative;
     transition: max-height 0.8s ease;
+    padding-bottom: 20px;
 }
 
 .photo-gallery.expanded {
     max-height: 5000px;
     /* Large enough to show all */
-    overflow: visible;
 }
 
 /* Gradient Overlay */
