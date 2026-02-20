@@ -200,7 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const setSrc = (img, index) => {
             if (index >= 0 && index < galleryImages.length) {
-                img.src = galleryImages[index].src;
+                // Load original WebP instead of thumbnail for lightbox
+                img.src = galleryImages[index].src.replace('/thumbnails/', '/');
                 img.style.visibility = 'visible';
             } else {
                 img.style.visibility = 'hidden';

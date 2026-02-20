@@ -1,1 +1,14 @@
 .DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+.idea/
+*.log
+package-lock.json
+optimize-images.js
+
+# Image originals (optional, un-comment if you want to keep them locally only)
+# images/*.JPG
+# images/*.jpg
+# images/*.png
+# images/*.jpeg
