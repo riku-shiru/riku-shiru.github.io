@@ -140,6 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let startTimestamp = 0;
 
+
+    // Controls Container
+    const controls = document.createElement('div');
+    controls.classList.add('lightbox-controls');
+    lightbox.appendChild(controls);
+
+    // Close Button
+
+    // Close Button
+    const closeBtn = document.createElement('button');
+    closeBtn.classList.add('lightbox-control', 'lightbox-close');
+    closeBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`;
+    controls.appendChild(closeBtn);
+
+
     function showSwipeHints() {
         if (window.innerWidth > 768) return; // Don't show on PC
 
@@ -176,17 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideWidth = getSlideWidth();
         const viewportWidth = window.innerWidth;
 
-        // Calculate the position to center the middle slide (index 1)
-        // The track has 3 slides: [0, 1, 2]
-        // We want the center of slide 1 to match the center of the viewport
-        // Slide 1 starts at slideWidth pixels (relative to track start)
-        // Slide 1 center is at slideWidth + (slideWidth / 2)
-
-        // Viewport center is viewportWidth / 2
-
-        // So we want: (slideWidth * 1.5) + translateX = viewportWidth / 2
-        // translateX = (viewportWidth / 2) - (slideWidth * 1.5)
-
         const centerOffset = (viewportWidth / 2) - (slideWidth * 1.5);
 
         currentTranslate = centerOffset;
@@ -194,10 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCarouselImages() {
-        // Center image is currentIndex
-        // Left image is currentIndex - 1
-        // Right image is currentIndex + 1
-
         const setSrc = (img, index) => {
             if (index >= 0 && index < galleryImages.length) {
                 // Load original WebP instead of thumbnail for lightbox
@@ -212,7 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setSrc(images[1], currentIndex);
         setSrc(images[2], currentIndex + 1);
 
-        // Reset track to center
         centerCarousel(false);
     }
 
@@ -256,21 +255,35 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.classList.add('active'); // Show first to get dimensions
             document.body.style.overflow = 'hidden';
 
-            // Allow a brief moment for layout/paint if needed, 
-            // but usually synchronous after class add is fine for offsetWidth
             updateImage(currentIndex);
-
             showSwipeHints();
         }
     });
 
-    // Close Lightbox
+    // Lightbox Interaction logic
     lightbox.addEventListener('click', e => {
+        // 1. Close Button
+        if (e.target.closest('.lightbox-close')) {
+            closeLightbox();
+            return;
+        }
+
+        // 3. Image Click
+        if (e.target.tagName === 'IMG' && e.target.closest('.lightbox-track')) {
+            return;
+        }
+
+        // 4. Background Click (Close only if hitting background, not image or controls)
         if (e.target === lightbox || e.target === track || e.target.classList.contains('lightbox-image-container')) {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
+            closeLightbox();
         }
     });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
 
     // Button Navigation
     prevBtn.addEventListener('click', (e) => {
@@ -284,11 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateSlide(direction) {
-        // direction: 1 for prev, -1 for next (Wait, this logic was inverted in prev code comments?)
-        // Let's standardise:
-        // direction = 1 => Moving to PREV image (swipe Right). Track moves RIGHT (positive).
-        // direction = -1 => Moving to NEXT image (swipe Left). Track moves LEFT (negative).
-
         if (direction === 1 && currentIndex === 0) return;
         if (direction === -1 && currentIndex === galleryImages.length - 1) return;
 
@@ -305,63 +313,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300); // Match CSS transition duration
     }
 
-    // Touch Events for Swipe
-    track.addEventListener('touchstart', (e) => {
+    // Swipe Helpers
+    function handleDragStart(clientX, clientY) {
         isDragging = true;
-        touchStartX = e.touches[0].clientX;
+        touchStartX = clientX;
+        touchStartY = clientY;
         track.classList.remove('animating');
         startTimestamp = Date.now();
-    }, { passive: false });
+    }
 
-    track.addEventListener('touchmove', (e) => {
+    function handleDragMove(clientX, clientY, e) {
         if (!isDragging) return;
-        e.preventDefault(); // Prevent background scroll
 
-        const currentX = e.touches[0].clientX;
-        const diffX = currentX - touchStartX;
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // Prevent background scroll only on mobile swipe
+        }
 
-        // Apply resistance if at edges
+        const diffX = clientX - touchStartX;
         let newTranslate = currentTranslate + diffX;
         if ((currentIndex === 0 && diffX > 0) || (currentIndex === galleryImages.length - 1 && diffX < 0)) {
             newTranslate = currentTranslate + (diffX * 0.3);
         }
-
         setTrackPosition(newTranslate, false);
-    }, { passive: false });
+    }
 
-    track.addEventListener('touchend', (e) => {
+    function handleDragEnd(clientX) {
         if (!isDragging) return;
         isDragging = false;
 
-        const endX = e.changedTouches[0].clientX;
-        const diffX = endX - touchStartX;
+        const diffX = clientX - touchStartX;
         const timeDiff = Date.now() - startTimestamp;
-
-        // Threshold for swipe (pixel based)
-        // Check if swiped more than 15% of slide width or fast swipe
         const slideWidth = getSlideWidth();
         const threshold = slideWidth * 0.15;
 
         if (Math.abs(diffX) > threshold || (Math.abs(diffX) > 20 && timeDiff < 300)) {
-            if (diffX > 0) {
-                animateSlide(1); // Prev
-            } else {
-                animateSlide(-1); // Next
-            }
+            if (diffX > 0) animateSlide(1);
+            else animateSlide(-1);
         } else {
-            // Snap back
             centerCarousel(true);
         }
+    }
+
+    // Touch Events
+    track.addEventListener('touchstart', (e) => {
+        handleDragStart(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: false });
+
+    track.addEventListener('touchmove', (e) => {
+        handleDragMove(e.touches[0].clientX, e.touches[0].clientY, e);
+    }, { passive: false });
+
+    track.addEventListener('touchend', (e) => {
+        handleDragEnd(e.changedTouches[0].clientX);
     });
 
-    // Keyboard Navigation
-    document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
-        if (e.key === 'ArrowLeft') animateSlide(1);
-        if (e.key === 'ArrowRight') animateSlide(-1);
-        if (e.key === 'Escape') {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    // Mouse Events for Desktop Panning
+    track.addEventListener('mousedown', (e) => {
+        if (e.target.closest('.lightbox-control') || e.target.closest('.lightbox-nav')) return;
+        handleDragStart(e.clientX, e.clientY);
+        e.preventDefault();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        handleDragMove(e.clientX, e.clientY, e);
+    });
+
+    window.addEventListener('mouseup', (e) => {
+        handleDragEnd(e.clientX);
     });
 });
