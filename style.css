@@ -821,6 +821,45 @@ main {
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     object-fit: contain;
+    user-select: none;
+    /* Prevent selection while swiping */
+}
+
+/* Lightbox Navigation */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    user-select: none;
+    z-index: 10001;
+    /* Ensure above image */
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-nav {
+        display: none;
+        /* Hide buttons on mobile, use swipe */
+    }
 }
 
 /* Awards & Speaking Refinement */
