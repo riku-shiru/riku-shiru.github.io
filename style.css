@@ -847,6 +847,10 @@ main {
     background: rgba(255, 255, 255, 0.3);
 }
 
+.lightbox-nav.hidden-nav {
+    display: none;
+}
+
 .lightbox-prev {
     left: 20px;
 }
@@ -857,8 +861,33 @@ main {
 
 @media (max-width: 768px) {
     .lightbox-nav {
-        display: none;
+        display: none !important;
         /* Hide buttons on mobile, use swipe */
+    }
+
+    .swipe-hint {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.7);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        z-index: 10000;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .swipe-hint.visible {
+        opacity: 1;
+    }
+
+    .swipe-hint-left {
+        left: 20px;
+    }
+
+    .swipe-hint-right {
+        right: 20px;
     }
 }
 

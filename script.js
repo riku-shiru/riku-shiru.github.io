@@ -101,11 +101,35 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.innerHTML = '&#10095;'; // Right Arrow
     lightbox.appendChild(nextBtn);
 
+    // Swipe Hints (Mobile)
+    const hintLeft = document.createElement('div');
+    hintLeft.classList.add('swipe-hint', 'swipe-hint-left');
+    hintLeft.innerHTML = '&#10094;'; // Left Chevron
+    lightbox.appendChild(hintLeft);
+
+    const hintRight = document.createElement('div');
+    hintRight.classList.add('swipe-hint', 'swipe-hint-right');
+    hintRight.innerHTML = '&#10095;'; // Right Chevron
+    lightbox.appendChild(hintRight);
+
     const imgElement = document.createElement('img');
     lightbox.appendChild(imgElement);
 
     let galleryImages = [];
     let currentIndex = 0;
+    let hintTimeout;
+
+    function showSwipeHints() {
+        // CSS handles visibility via media query, so we just toggle 'visible' class
+        hintLeft.classList.add('visible');
+        hintRight.classList.add('visible');
+
+        clearTimeout(hintTimeout);
+        hintTimeout = setTimeout(() => {
+            hintLeft.classList.remove('visible');
+            hintRight.classList.remove('visible');
+        }, 2000); // Fade out after 2 seconds
+    }
 
     function updateImage(index) {
         if (index < 0 || index >= galleryImages.length) return; // Prevent out of bounds
@@ -115,15 +139,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update button visibility
         if (currentIndex === 0) {
-            prevBtn.style.display = 'none';
+            prevBtn.classList.add('hidden-nav');
+            // Hide left hint if at start
+            hintLeft.style.display = 'none';
         } else {
-            prevBtn.style.display = 'block';
+            prevBtn.classList.remove('hidden-nav');
+            hintLeft.style.display = 'block';
         }
 
         if (currentIndex === galleryImages.length - 1) {
-            nextBtn.style.display = 'none';
+            nextBtn.classList.add('hidden-nav');
+            // Hide right hint if at end
+            hintRight.style.display = 'none';
         } else {
-            nextBtn.style.display = 'block';
+            nextBtn.classList.remove('hidden-nav');
+            hintRight.style.display = 'block';
         }
     }
 
@@ -136,6 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
             updateImage(currentIndex);
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden'; // Lock Scroll
+
+            showSwipeHints(); // Show hints on open
         }
     });
 
