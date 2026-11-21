@@ -1,4 +1,89 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Auto-update copyright year
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.copyright-year').forEach(el => {
+        el.textContent = currentYear;
+    });
+
+
+    // Scrollspy for in-page navigation
+    const sectionNavLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    if (sectionNavLinks.length > 0) {
+        const trackedSections = sectionNavLinks
+            .map(link => {
+                const href = link.getAttribute('href');
+                const target = href === '#' ? document.getElementById('about') : document.querySelector(href);
+                return target ? { link, target } : null;
+            })
+            .filter(Boolean);
+
+        const updateActiveNav = () => {
+            const scrollPos = window.scrollY + 140;
+            let current = trackedSections[0];
+            for (const item of trackedSections) {
+                if (item.target.offsetTop <= scrollPos) {
+                    current = item;
+                }
+            }
+            sectionNavLinks.forEach(l => l.classList.remove('active'));
+            if (current) current.link.classList.add('active');
+        };
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        updateActiveNav();
+    }
+
+    // Staggered Card Reveal
+    const staggerContainers = document.querySelectorAll('.focus-grid, .picked-articles, .awards-custom-grid, .speaking-grid');
+    const staggerObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const items = entry.target.querySelectorAll('.stagger-item');
+            items.forEach((item, idx) => {
+                item.style.transitionDelay = `${idx * 70}ms`;
+                item.classList.add('is-revealed');
+                setTimeout(() => {
+                    item.style.transitionDelay = '0ms';
+                }, 700 + idx * 70);
+            });
+            obs.unobserve(entry.target);
+        });
+    }, { threshold: 0.12 });
+
+    staggerContainers.forEach(container => {
+        const children = container.querySelectorAll('.focus-item, .article-item, .award-card, .speaking-card');
+        children.forEach(child => child.classList.add('stagger-item'));
+        staggerObserver.observe(container);
+    });
+
+    // Copy Email Button
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    if (copyEmailBtn) {
+        let resetTimer;
+        copyEmailBtn.addEventListener('click', async () => {
+            const email = copyEmailBtn.dataset.email;
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch {
+                const temp = document.createElement('textarea');
+                temp.value = email;
+                temp.style.position = 'fixed';
+                temp.style.opacity = '0';
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand('copy');
+                document.body.removeChild(temp);
+            }
+            copyEmailBtn.textContent = 'Copied!';
+            copyEmailBtn.classList.add('copied');
+            clearTimeout(resetTimer);
+            resetTimer = setTimeout(() => {
+                copyEmailBtn.textContent = 'Copy Email';
+                copyEmailBtn.classList.remove('copied');
+            }, 2000);
+        });
+    }
+
     // Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
