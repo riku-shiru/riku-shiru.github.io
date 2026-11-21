@@ -5,6 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rikushiru | Portfolio</title>
+	<meta name="description" content="Webエンジニア・エンジニアリングマネージャー 渡邉陸斗（Rikushiru）のポートフォリオサイト。設計・開発、開発生産性向上、AI活用、登壇・執筆活動などを紹介しています。">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://me.riku-shiru.com/">
+	<meta property="og:title" content="Rikushiru | Portfolio">
+	<meta property="og:description" content="Webエンジニア・エンジニアリングマネージャー 渡邉陸斗（Rikushiru）のポートフォリオサイト。">
+	<meta property="og:image" content="https://me.riku-shiru.com/images/profile.jpg">
+	<meta property="og:site_name" content="Rikushiru Portfolio">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Rikushiru | Portfolio">
+	<meta name="twitter:description" content="Webエンジニア・エンジニアリングマネージャー 渡邉陸斗（Rikushiru）のポートフォリオサイト。">
+	<meta name="twitter:image" content="https://me.riku-shiru.com/images/profile.jpg">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -50,43 +61,64 @@
 	</header>
 
 	<main>
-		<div class="container" style="padding-top: 40px;"> <!-- Added padding for spacing -->
-			<div class="about-grid fade-in-up">
-				<div class="about-image">
-					<img src="images/profile.webp" alt="Rikuto Watanabe">
-				</div>
-				<div class="about-text">
-					<h1 class="about-name">Rikuto Watanabe</h1>
-					<p class="nickname">Nickname: Rikushiru (りくしる)</p>
-					<p>Webアプリケーションの設計・開発、組織マネジメントを行うWebエンジニア。</p>
-					<p>得意なことは課題発見と解決に導く完遂力。</p>
-					<p class="birth-date"><strong>Birth Date:</strong> 1995/09/21</p>
+		<section id="about" class="about-section">
+			<div class="container">
+				<div class="about-grid fade-in-up">
+					<div class="about-image">
+						<img src="images/profile.webp" alt="Rikuto Watanabe">
+					</div>
+					<div class="about-text">
+						<h1 class="about-name">Rikuto Watanabe</h1>
+						<p class="nickname">Nickname: Rikushiru (りくしる)</p>
+						<p>Webアプリケーションの設計・開発、組織マネジメントを行うWebエンジニア。</p>
+						<p>課題の本質を見抜き、技術とリーダーシップで解決までやり切ることを強みとしています。</p>
+						<p class="birth-date"><strong>Birth Date:</strong> 1995/09/21</p>
 
-					<div class="timeline">
-						<div class="timeline-item">
-							<span class="date">2018/04 - Present</span>
-							<div class="timeline-logo-header">
-								<img src="images/lifull.webp" alt="LIFULL" class="brand-logo-lifull">
+						<div class="timeline">
+							<div class="timeline-item">
+								<span class="date">2018/04 - Present</span>
+								<div class="timeline-logo-header">
+									<img src="images/lifull.webp" alt="LIFULL" class="brand-logo-lifull">
+								</div>
+								<h4 class="highlight-title">株式会社LIFULL</h4>
+								<p class="highlight-role">エンジニアマネージャー / シニアアプリケーションエンジニア</p>
+								<p>「LIFULL
+									HOME'S」のバックエンド開発、高トラフィック基盤の刷新、大規模リアーキテクチャを主導。<br>現在はエンジニアリングマネージャー兼シニアエンジニアとして、組織運営・採用・育成に加え、開発生産性向上基盤の推進やAI活用施策の立案・実装に従事。
+								</p>
 							</div>
-							<h4 class="highlight-title">株式会社LIFULL</h4>
-							<p class="highlight-role">エンジニアマネージャー / シニアアプリケーションエンジニア</p>
-							<p>「LIFULL
-								HOME'S」のバックエンド開発、基盤刷新、アプリケーションの大規模リアーキテクチャを主導。<br>現在はエンジニアリングマネージャーとして組織運営・採用・育成に従事。
-							</p>
-						</div>
-						<div class="timeline-item">
-							<span class="date">2021/08 - 2023/03</span>
-							<div class="timeline-logo-header">
-								<img src="images/codegym.webp" alt="CODEGYM" class="brand-logo-lifull">
+							<div class="timeline-item">
+								<span class="date">2021/08 - 2023/03</span>
+								<div class="timeline-logo-header">
+									<img src="images/codegym.webp" alt="CODEGYM" class="brand-logo-lifull">
+								</div>
+								<h4 class="highlight-title">株式会社CODEGYM</h4>
+								<p class="highlight-role">Instructor (副業)</p>
+								<p>プログラミングスクールでのメンター業務。</p>
 							</div>
-							<h4 class="highlight-title">株式会社CODEGYM</h4>
-							<p class="highlight-role">Instructor (副業)</p>
-							<p>プログラミングスクールでのメンター業務。</p>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+
+		<section id="focus" class="section focus-section">
+			<div class="container">
+				<h2 class="section-title fade-in-up">Focus Areas</h2>
+				<div class="focus-grid fade-in-up">
+					<div class="focus-item">
+						<h3>Architecture &amp; Scalability</h3>
+						<p>大規模システムのリアーキテクチャやマイクロサービス化、高トラフィック基盤のパフォーマンス・コスト最適化を推進。変化に強く運用しやすい構成づくりを得意としています。</p>
+					</div>
+					<div class="focus-item">
+						<h3>Developer Experience</h3>
+						<p>CI/CDやリリース自動化をはじめとする開発生産性向上基盤を設計・構築。チーム内の改善にとどまらず、組織全体への展開と定着まで一貫して牽引しています。</p>
+					</div>
+					<div class="focus-item">
+						<h3>AI &amp; Engineering Management</h3>
+						<p>AIエージェントを活用した開発プロセス刷新やLLM機能の設計・実装を推進しつつ、EMとしてエンジニア組織の運営・採用・育成にも向き合っています。</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<section id="writing" class="section bg-light">
@@ -94,7 +126,7 @@
 				<h2 class="section-title fade-in-up">Writing</h2>
 				<div class="works-grid">
 					<!-- LIFULL Blog -->
-					<a href="https://www.lifull.blog/archive/author/LIFULL-watanari" target="_blank"
+					<a href="https://www.lifull.blog/archive/author/LIFULL-watanari" target="_blank" rel="noopener noreferrer"
 						class="work-card fade-in-up">
 						<div class="work-icon-container"
 							style="background-color: #fff; border-bottom: 2px solid #FF5800;">
@@ -102,12 +134,12 @@
 						</div>
 						<div class="work-info">
 							<h3>LIFULL Creators Blog</h3>
-							<p>自身が執筆した企業技術ブログ記事のまとめ</p>
+							<p>リアーキテクチャや画像配信基盤の刷新、リリース自動化・AI活用などの実践事例を執筆しています。</p>
 						</div>
 					</a>
 
 					<!-- Qiita -->
-					<a href="https://qiita.com/riku-shiru" target="_blank" class="work-card fade-in-up">
+					<a href="https://qiita.com/riku-shiru" target="_blank" rel="noopener noreferrer" class="work-card fade-in-up">
 						<div class="work-icon-container" style="background-color: #55c500;">
 							<!-- Qiita SVG -->
 							<svg class="work-svg-logo" viewBox="0 0 24 24" fill="white">
@@ -117,19 +149,45 @@
 						</div>
 						<div class="work-info">
 							<h3>Qiita</h3>
-							<p>技術記事の投稿活動</p>
+							<p>日々の開発で得た知見や技術検証、つまずいたポイントの解決ログをアウトプットしています。</p>
 						</div>
 					</a>
 
 					<!-- Rikushiru.log -->
-					<a href="https://blog.riku-shiru.com" target="_blank" class="work-card fade-in-up">
+					<a href="https://blog.riku-shiru.com" target="_blank" rel="noopener noreferrer" class="work-card fade-in-up">
 						<div class="work-image" style="background-image: url('images/thumbnails/rikushiru_log.webp')">
 						</div>
 						<div class="work-info">
 							<h3>Rikushiru.log</h3>
-							<p>技術・雑記ブログ</p>
+							<p>個人開発の記録や技術メモ、日常の気づきなどをゆるく綴っている個人ブログです。</p>
 						</div>
 					</a>
+				</div>
+
+				<div class="picked-articles-wrapper fade-in-up">
+					<h3 class="subsection-title">Picked Articles</h3>
+					<div class="picked-articles">
+						<a href="https://www.lifull.blog/entry/2026/06/09/170648" target="_blank" rel="noopener noreferrer" class="article-item">
+							<span class="article-date">2026.06</span>
+							<span class="article-title">課題発見から1年半、ついにメインシステム群へ！「Beezy」が実現するリリースフローの集約化・自動化・加速化</span>
+							<span class="article-arrow" aria-hidden="true">↗</span>
+						</a>
+						<a href="https://www.lifull.blog/entry/2024/03/28/180000" target="_blank" rel="noopener noreferrer" class="article-item">
+							<span class="article-date">2024.03</span>
+							<span class="article-title">開発生産性向上への道：LIFULL HOME'Sのシステムアーキテクチャリプレイス</span>
+							<span class="article-arrow" aria-hidden="true">↗</span>
+						</a>
+						<a href="https://www.lifull.blog/entry/2023/05/26/170000" target="_blank" rel="noopener noreferrer" class="article-item">
+							<span class="article-date">2023.05</span>
+							<span class="article-title">軽量で軽快！LIFULL HOME'SにおけるUX改善のためのWebP導入</span>
+							<span class="article-arrow" aria-hidden="true">↗</span>
+						</a>
+						<a href="https://www.lifull.blog/entry/2023/04/02/090000" target="_blank" rel="noopener noreferrer" class="article-item">
+							<span class="article-date">2023.04</span>
+							<span class="article-title">LIFULL HOME'Sの画像変換サーバを基盤刷新しパフォーマンス向上をした話</span>
+							<span class="article-arrow" aria-hidden="true">↗</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -139,57 +197,76 @@
 				<h2 class="section-title fade-in-up">Skills</h2>
 				<div class="skills-wrapper fade-in-up">
 					<div class="skill-category">
-						<h3>AI & Future</h3>
+						<h3>AI &amp; Future</h3>
 						<div class="skill-list">
-							<span class="skill-tag">Gemini</span>
-							<span class="skill-tag">Kiro</span>
-							<span class="skill-tag">Antigravity</span>
-							<span class="skill-tag">Amazon Q Developer</span>
-							<span class="skill-tag">Codex</span>
+							<span class="skill-tag">OpenAI API</span>
+							<span class="skill-tag">AI Agent / SSE</span>
+							<span class="skill-tag">Function Calling</span>
 							<span class="skill-tag">MCP</span>
+							<span class="skill-tag">Kiro</span>
+							<span class="skill-tag">Codex</span>
+							<span class="skill-tag">Antigravity</span>
+							<span class="skill-tag">Gemini</span>
+							<span class="skill-tag">Amazon Q Developer</span>
 						</div>
 					</div>
 					<div class="skill-category">
 						<h3>Languages</h3>
 						<div class="skill-list">
-							<span class="skill-tag">JavaScript (Node.js)</span>
 							<span class="skill-tag">TypeScript</span>
+							<span class="skill-tag">JavaScript (Node.js)</span>
+							<span class="skill-tag">Go</span>
 							<span class="skill-tag">Ruby</span>
 							<span class="skill-tag">PHP</span>
 							<span class="skill-tag">Python</span>
-							<span class="skill-tag">Go</span>
 						</div>
 					</div>
 					<div class="skill-category">
 						<h3>Infrastructure</h3>
 						<div class="skill-list">
-							<span class="skill-tag">AWS (Lambda, ECS, S3, etc.)</span>
-							<span class="skill-tag">GCP (CloudRun, BigQuery)</span>
+							<span class="skill-tag">AWS (ECS, Lambda, S3, CloudFront, etc.)</span>
+							<span class="skill-tag">GCP (BigQuery, Cloud Run)</span>
 							<span class="skill-tag">Docker / Kubernetes</span>
+							<span class="skill-tag">Nginx / HAProxy</span>
+							<span class="skill-tag">Linux</span>
+							<span class="skill-tag">GitHub Actions / GitOps</span>
 							<span class="skill-tag">Terraform / CloudFormation</span>
-							<span class="skill-tag">CI/CD (GitHub Actions)</span>
+							<span class="skill-tag">Supabase / Netlify</span>
 						</div>
 					</div>
 					<div class="skill-category">
-						<h3>Frameworks & Tools</h3>
+						<h3>Frameworks &amp; Tools</h3>
 						<div class="skill-list">
-							<span class="skill-tag">Rails</span>
-							<span class="skill-tag">Laravel / Symfony</span>
 							<span class="skill-tag">Express / Fastify</span>
-							<span class="skill-tag">React / Vue</span>
+							<span class="skill-tag">Preact / React / Vue</span>
 							<span class="skill-tag">Next.js</span>
-							<span class="skill-tag">Apache Solr / ElasticSearch</span>
+							<span class="skill-tag">Tailwind CSS</span>
+							<span class="skill-tag">Rails / Sinatra</span>
+							<span class="skill-tag">Laravel / Symfony</span>
+							<span class="skill-tag">Playwright / Vitest</span>
+							<span class="skill-tag">Apache Solr / Elasticsearch</span>
 						</div>
 					</div>
 					<div class="skill-category">
 						<h3>DB / Architecture</h3>
 						<div class="skill-list">
 							<span class="skill-tag">MySQL / PostgreSQL</span>
-							<span class="skill-tag">Redis</span>
 							<span class="skill-tag">Oracle</span>
-							<span class="skill-tag">DDD</span>
-							<span class="skill-tag">Clean Architecture</span>
-							<span class="skill-tag">Microservices</span>
+							<span class="skill-tag">Redis / DynamoDB</span>
+							<span class="skill-tag">Clean Architecture / DDD</span>
+							<span class="skill-tag">Microservices / BFF</span>
+							<span class="skill-tag">GeoJSON / PBF</span>
+							<span class="skill-tag">Core Web Vitals</span>
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Management &amp; Leadership</h3>
+						<div class="skill-list">
+							<span class="skill-tag">Engineering Management</span>
+							<span class="skill-tag">Tech Lead</span>
+							<span class="skill-tag">Hiring &amp; Onboarding</span>
+							<span class="skill-tag">DX / Platform Engineering</span>
+							<span class="skill-tag">Incident Management</span>
 						</div>
 					</div>
 				</div>
@@ -234,7 +311,7 @@
 						<div class="speaking-body">
 							<p>若手エンジニア向け勉強会での登壇。</p>
 						</div>
-						<a href="https://lifull.connpass.com/event/152299/" target="_blank" class="speaking-link">View
+						<a href="https://lifull.connpass.com/event/152299/" target="_blank" rel="noopener noreferrer" class="speaking-link">View
 							Event</a>
 					</div>
 
@@ -248,7 +325,7 @@
 						<div class="speaking-body">
 							<p>25卒学生向けイベントでの登壇。</p>
 						</div>
-						<a href="https://paiza.jp/student/job_offers/23263" target="_blank" class="speaking-link">View
+						<a href="https://paiza.jp/student/job_offers/23263" target="_blank" rel="noopener noreferrer" class="speaking-link">View
 							Event</a>
 					</div>
 
@@ -263,9 +340,9 @@
 							<p>YUMEMI主催の勉強会にて、開発者体験向上の取り組みについて発表。</p>
 						</div>
 						<div class="speaking-links">
-							<a href="https://yumemi.connpass.com/event/371982/" target="_blank"
+							<a href="https://yumemi.connpass.com/event/371982/" target="_blank" rel="noopener noreferrer"
 								class="speaking-link">Event</a>
-							<a href="https://www.youtube.com/watch?v=M3Kv05csnn8" target="_blank"
+							<a href="https://www.youtube.com/watch?v=M3Kv05csnn8" target="_blank" rel="noopener noreferrer"
 								class="speaking-link secondary">Archive</a>
 						</div>
 					</div>
@@ -276,15 +353,15 @@
 							<span class="speaking-date">2025</span>
 							<span class="speaking-organizer">AWS主催</span>
 						</div>
-						<h3 class="speaking-title">Amazon Q Developer Meetup #2</h3>
+						<h3 class="speaking-title">Amazon Q (Kiro) Developer Meetup #2</h3>
 						<div class="speaking-body">
-							<p>Amazon Q Developer を業務で活用した成果共有と最新情報のUpdate。</p>
+							<p>Amazon Q Developer (Kiro) を業務で活用した成果共有と最新情報のUpdate。</p>
 						</div>
 						<div class="speaking-links">
 							<a href="https://aws.amazon.com/startups/events/amazonq-developer-meetup-20250828?lang=ja"
-								target="_blank" class="speaking-link">Event</a>
+								target="_blank" rel="noopener noreferrer" class="speaking-link">Event</a>
 							<a href="https://aws.amazon.com/jp/blogs/news/amazon-q-developer-meetup-2-report/"
-								target="_blank" class="speaking-link secondary">Report</a>
+								target="_blank" rel="noopener noreferrer" class="speaking-link secondary">Report</a>
 						</div>
 					</div>
 				</div>
@@ -301,7 +378,7 @@
 							<li><span class="interest-label">Application Development</span> -
 								個人的に作りたい・使いたいWebアプリケーションを開発しています。</li>
 							<li><span class="interest-label">YouTuber:</span> <a
-									href="https://www.youtube.com/user/TokaiOnAir" target="_blank"
+									href="https://www.youtube.com/user/TokaiOnAir" target="_blank" rel="noopener noreferrer"
 									class="external-link">東海オンエア</a></li>
 							<li><span class="interest-label">Game</span> - Monster Hunter, Simulation, GeoGuessr, Puzzle
 								Games.</li>
@@ -356,38 +433,41 @@
 				<h2 class="section-title">Contact</h2>
 				<p>お問い合わせはメールまたはSNSまで</p>
 
-				<a href="mailto:rikushiru.com@gmail.com" class="btn">Send Email</a>
+				<div class="contact-actions">
+					<a href="mailto:rikushiru.com@gmail.com" class="btn">Send Email</a>
+					<button type="button" id="copy-email-btn" class="btn btn-outline" data-email="rikushiru.com@gmail.com">Copy Email</button>
+				</div>
 
 				<div class="social-links">
-					<a href="http://twitter.com/riku_shiru" target="_blank" aria-label="X (Twitter)"
+					<a href="https://x.com/riku_shiru" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"
 						class="sns-icon x-icon">
 						<svg viewBox="0 0 24 24">
 							<path
 								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
 						</svg>
 					</a>
-					<a href="https://github.com/riku-shiru" target="_blank" aria-label="GitHub"
+					<a href="https://github.com/riku-shiru" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
 						class="sns-icon github-icon">
 						<svg viewBox="0 0 24 24">
 							<path
 								d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
 						</svg>
 					</a>
-					<a href="https://www.facebook.com/rkt.w2024" target="_blank" aria-label="Facebook"
+					<a href="https://www.facebook.com/rkt.w2024" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
 						class="sns-icon facebook-icon">
 						<svg viewBox="0 0 24 24">
 							<path
 								d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036c-2.148 0-2.971.956-2.971 3.005v.97h3.917l-.52 3.667h-3.397v7.98h-4.846z" />
 						</svg>
 					</a>
-					<a href="https://jp.linkedin.com/in/%E9%99%B8%E6%96%97-%E6%B8%A1%E9%82%89-16415b18a" target="_blank"
+					<a href="https://jp.linkedin.com/in/%E9%99%B8%E6%96%97-%E6%B8%A1%E9%82%89-16415b18a" target="_blank" rel="noopener noreferrer"
 						aria-label="LinkedIn" class="sns-icon linkedin-icon">
 						<svg viewBox="0 0 24 24">
 							<path
 								d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
 						</svg>
 					</a>
-					<a href="https://www.instagram.com/rikurikucom/" target="_blank" aria-label="Instagram"
+					<a href="https://www.instagram.com/rikurikucom/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
 						class="sns-icon instagram-icon">
 						<svg viewBox="0 0 24 24">
 							<path
@@ -401,7 +481,7 @@
 
 	<footer id="footer">
 		<div class="container">
-			<p>&copy; 2024 Rikushiru. All rights reserved.</p>
+			<p>&copy; <span class="copyright-year">2026</span> Rikushiru. All rights reserved.</p>
 		</div>
 	</footer>
 
